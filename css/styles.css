@@ -49,11 +49,6 @@ button {
   font-family: inherit;
 }
 
-.hero,
-.footer {
-  background-color: #2f303a;
-}
-
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -75,6 +70,8 @@ button {
   margin-right: auto;
 }
 
+/* logo */
+
 .logo {
   color: #000000;
   font-family: var(--tittle-font-family);
@@ -86,6 +83,8 @@ button {
 .accent {
   color: var(--accent-color);
 }
+
+/* Навигация сайта */
 
 .main-nav {
   display: flex;
@@ -120,6 +119,9 @@ button {
 .site-nav .link.current {
   color: var(--accent-color);
 }
+
+/* Связь с нами */
+
 .call-us {
   display: flex;
 }
@@ -141,13 +143,25 @@ button {
 }
 
 /* main */
+
 /* hero */
 .hero {
+  max-width: 1600px;
   padding-top: 200px;
   padding-bottom: 200px;
   padding-left: 0px;
   padding-right: 0px;
   text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+
+  background-color: #2f303a;
+  /* background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4)),
+    url(../images/studio/hero_photo.jpeg;); */
+  background-image: url(../images/studio/hero_photo.jpeg);
+
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .hero .hero-title {
   color: #ffffff;
@@ -163,7 +177,7 @@ button {
   width: 696px;
 }
 
-/* кнопка */
+/* кнопка героя */
 
 .hero .button {
   background-color: var(--accent-color);
@@ -181,9 +195,11 @@ button {
   padding-right: 32px;
   margin-top: 30px;
   border: none;
+  cursor: pointer;
 }
 
 /* Преимущества */
+
 /* скрытый заголовок */
 .visually-hidden {
   position: absolute;
@@ -199,6 +215,7 @@ button {
   overflow: hidden;
 }
 /*  */
+
 /* Примеры работ */
 .feature {
   padding-top: 0px;
@@ -274,6 +291,8 @@ button {
 
 /* Footer */
 .footer {
+  background-color: #2f303a;
+
   padding: 60px 0;
 }
 .footer .logo {
