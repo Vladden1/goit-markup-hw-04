@@ -68,7 +68,7 @@ button {
   display: flex;
 }
 .container {
-  width: 1200px;
+  width: 1230px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -199,6 +199,10 @@ button {
   overflow: hidden;
 }
 /*  */
+/* Примеры работ */
+.feature {
+  padding-top: 0px;
+}
 .feature-item {
   width: 270px;
 }
@@ -219,8 +223,6 @@ button {
   line-height: 1.71;
 }
 
-/* Примеры работ */
-
 .section .section-title {
   color: var(--tittle-text-color);
   font-weight: 700;
@@ -240,11 +242,9 @@ button {
 
 /* Команда */
 .section.team {
-}
-
-.container.team {
   background-color: #f5f4fa;
 }
+
 .wrap-card {
   background-color: #ffffff;
   padding: 30px 0;
@@ -273,7 +273,7 @@ button {
 }
 
 /* Footer */
-.footer .container {
+.footer {
   padding: 60px 0;
 }
 .footer .logo {
@@ -343,6 +343,7 @@ header.section {
   padding-right: 22px;
   padding-top: 6px;
   padding-bottom: 6px;
+  cursor: pointer;
 }
 
 /* примеры работ */
