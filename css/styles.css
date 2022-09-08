@@ -61,6 +61,7 @@ button {
 }
 .header {
   display: flex;
+  height: 80px;
 }
 .container {
   width: 1200px;
@@ -142,6 +143,28 @@ button {
   color: var(--accent-color);
 }
 
+.call-us .item {
+  display: flex;
+  align-items: center;
+}
+.link.mail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.link.tel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.call-us .icon {
+  display: flex;
+  fill: currentColor;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
 /* main */
 
 /* hero */
@@ -156,16 +179,14 @@ button {
   margin-left: auto;
 
   background-color: #2f303a;
-  /* background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4)),
-    url(../images/studio/hero_photo.jpeg;); */
-  background-image: url(../images/studio/hero_photo.jpeg);
-
+  background-image: linear-gradient(to right, #2f303a66 40%, #2f303a66 40%),
+    url(../images/studio/hero_photo.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .hero .hero-title {
   color: #ffffff;
-
   letter-spacing: 0.06em;
   font-weight: 900;
   font-size: 44px;
@@ -214,15 +235,31 @@ button {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-/*  */
+/* скрытый заголовок  */
 
+.feature-item {
+  width: 270px;
+}
+
+.feature-item .thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+.thumb .feature-icon {
+  display: flex;
+  width: 70px;
+  height: 70px;
+}
 /* Примеры работ */
 .feature {
   padding-top: 0px;
 }
-.feature-item {
-  width: 270px;
-}
+
 .feature-list {
   display: flex;
   gap: 30px;
@@ -263,14 +300,16 @@ button {
 }
 
 .wrap-card {
-  background-color: #ffffff;
   padding: 30px 0;
+}
+.team-list .team-item {
+  background-color: #ffffff;
+
   border-radius: 0px 0px 4px 4px;
   text-align: center;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
-
 .team-list {
   display: flex;
 }
@@ -287,8 +326,80 @@ button {
 .team-list .team-text {
   font-size: 16px;
   line-height: 1.19;
+  margin-bottom: 16px;
+}
+.social-list {
+  display: flex;
+  justify-content: center;
+  padding-left: 32px;
+  padding-right: 32px;
+  gap: 10px;
+  background-color: #ffffff;
+}
+.social-list .link-icon {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+}
+.social-link:focus .link-icon,
+.social-link:hover .link-icon {
+  fill: #ffffff;
+}
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.social-link:focus,
+.social-link:hover {
+  background-color: var(--accent-color);
 }
 
+/* CLients */
+
+.clients .section-tittle {
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+.clients .section-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.clients .list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+.clients .clients-icon {
+  width: 106px;
+  height: 60px;
+  fill: #afb1b8;
+}
+.clients .list-item:focus,
+.clients .list-item:hover {
+  border: 1px solid var(--accent-color);
+}
+/* КАК СДЕЛАТЬ ИЗМ ЦВЕТА ИКОНКИ И ГРАНИЦЫ ВМЕСТЕ!!!! */
+
+.clients .clients-icon:focus,
+.clients .clients-icon:hover {
+  fill: var(--accent-color);
+}
+
+.clients-icon:focus .clients {
+  border: 1px solid var(--accent-color);
+}
 /* Footer */
 .footer {
   background-color: #2f303a;
@@ -314,11 +425,14 @@ button {
   color: var(--primary-white-color);
 }
 
-.footer-list .link:focus,
-.footer-list .link:hover {
+.footer-list .link:focus .list-item,
+.footer-list .link:hover .list-item {
   color: var(--accent-color);
 }
 
+.social-list footer {
+  display: flex;
+}
 /*  */
 /*  */
 /*  */
