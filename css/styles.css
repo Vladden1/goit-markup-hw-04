@@ -341,10 +341,7 @@ button {
   height: 20px;
   fill: #afb1b8;
 }
-.social-link:focus .link-icon,
-.social-link:hover .link-icon {
-  fill: #ffffff;
-}
+
 .social-link {
   display: flex;
   justify-content: center;
@@ -353,8 +350,14 @@ button {
   height: 44px;
   border-radius: 50%;
 }
-.social-link:focus,
-.social-link:hover {
+.wrap-card .social-link:hover,
+.wrap-card .social-link:focus {
+  background-color: var(--accent-color);
+}
+
+.social-link:focus .link-icon,
+.social-link:hover .link-icon {
+  fill: #ffffff;
   background-color: var(--accent-color);
 }
 
@@ -367,12 +370,12 @@ button {
   letter-spacing: 0.03em;
   margin-bottom: 50px;
 }
-.clients .section-list {
+.clients .clients-list {
   display: flex;
   justify-content: center;
   gap: 30px;
 }
-.clients .list-item {
+/* .clients-item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -380,28 +383,41 @@ button {
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+} */
+
+.clients-item {
+  flex-grow: 1;
 }
-.clients .clients-icon {
+
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.clients-icon {
   width: 106px;
   height: 60px;
   fill: #afb1b8;
 }
-.clients .list-item:focus,
-.clients .list-item:hover {
+
+.clients-link:focus,
+.clients-link:hover {
   border: 1px solid var(--accent-color);
 }
-/* КАК СДЕЛАТЬ ИЗМ ЦВЕТА ИКОНКИ И ГРАНИЦЫ ВМЕСТЕ!!!! */
 
-.clients .clients-icon:focus,
-.clients .clients-icon:hover {
+.clients-link:focus .clients-icon,
+.clients-link:hover .clients-icon {
   fill: var(--accent-color);
 }
 
-.clients-icon:focus .clients {
-  border: 1px solid var(--accent-color);
-}
 /* Footer */
 .footer {
+  display: flex;
   background-color: #2f303a;
 
   padding: 60px 0;
@@ -425,14 +441,55 @@ button {
   color: var(--primary-white-color);
 }
 
-.footer-list .link:focus .list-item,
-.footer-list .link:hover .list-item {
+.footer-list .link:focus,
+.footer-list .link:hover {
   color: var(--accent-color);
 }
 
 .social-list footer {
   display: flex;
 }
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.container-left {
+  margin-right: 70px;
+}
+
+.container-right {
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+}
+
+.container-right-text {
+  margin-bottom: 20px;
+}
+
+.container-right .social-list {
+  background-color: transparent;
+  padding: 0px;
+}
+
+.container-right .social-item {
+  flex-grow: 1;
+}
+.container-right .social-link {
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.container-right .link-icon {
+  fill: #ffffff;
+}
+
+.container-right .social-link:focus,
+.container-right .social-link:hover {
+  background-color: var(--accent-color);
+}
+
 /*  */
 /*  */
 /*  */
@@ -491,6 +548,7 @@ header.section {
 .examples a {
   display: block;
   color: var(--tittle-text-color);
+  /* boxshadow */
 }
 .examples-list .tittle-card {
   font-weight: 700;
